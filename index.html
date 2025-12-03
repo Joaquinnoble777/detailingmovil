@@ -305,9 +305,9 @@
         }
         
         .testimonial-card:before {
-            content: """;
-            font-size: 5rem;
-            color: var(--light-gray);
+            content: "";
+            font-size: 5 rem;
+            color: var(--light-gray);   
             position: absolute;
             top: -10px;
             left: 10px;
@@ -654,6 +654,450 @@
             </div>
         </div>
     </section>
+
+
+    <!-- Formulario de Reserva con Precios -->
+<section id="reserva" class="reserva-section" style="background-color: #f9f9f9; padding: 5rem 0;">
+    <div class="container">
+        <h2>Reserva tu Servicio</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
+            Completa el formulario y te contactaremos por WhatsApp para confirmar día y hora. 
+            <strong>Precios en pesos uruguayos (UYU)</strong> - Todos los servicios incluyen materiales y desplazamiento dentro de Montevideo.
+        </p>
+        
+        <div class="reserva-container" style="max-width: 1000px; margin: 0 auto; background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+            
+            <!-- Paquetes de Servicios -->
+            <div style="margin-bottom: 2.5rem;">
+                <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.4rem; text-align: center;">Selecciona tu Paquete</h3>
+                
+                <div class="paquetes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                    
+                    <!-- Paquete Básico -->
+                    <div class="paquete-card" style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; cursor: pointer;"
+                         onclick="seleccionarPaquete('basico', 1600)">
+                        <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <h4 style="color: var(--secondary); margin-bottom: 0.5rem; font-size: 1.3rem;">Paquete Básico</h4>
+                            <div style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$1.600</div>
+                            <div style="font-size: 0.9rem; color: #666;">Duración: 2-3 horas</div>
+                        </div>
+                        <ul style="text-align: left; padding-left: 1.2rem; margin-bottom: 1.5rem; font-size: 0.95rem;">
+                            <li style="margin-bottom: 0.5rem;">Lavado exterior completo</li>
+                            <li style="margin-bottom: 0.5rem;">Aspirado interior general</li>
+                            <li style="margin-bottom: 0.5rem;">Limpieza de vidrios</li>
+                            <li style="margin-bottom: 0.5rem;">Limpieza de plásticos interiores</li>
+                            <li style="margin-bottom: 0.5rem;">Secado con microfibra</li>
+                        </ul>
+                        <div class="paquete-selector" id="selector-basico" style="display: none; color: var(--primary); font-weight: 600;">
+                            <i class="fas fa-check-circle"></i> Seleccionado
+                        </div>
+                    </div>
+                    
+                    <!-- Paquete Premium -->
+                    <div class="paquete-card" style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; cursor: pointer; position: relative;"
+                         onclick="seleccionarPaquete('premium', 2900)">
+                        <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 15px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">
+                            MÁS POPULAR
+                        </div>
+                        <div style="background: linear-gradient(135deg, #f5f5f5, #e8f4fd); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <h4 style="color: var(--secondary); margin-bottom: 0.5rem; font-size: 1.3rem;">Paquete Premium</h4>
+                            <div style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$2.900</div>
+                            <div style="font-size: 0.9rem; color: #666;">Duración: 4-5 horas</div>
+                        </div>
+                        <ul style="text-align: left; padding-left: 1.2rem; margin-bottom: 1.5rem; font-size: 0.95rem;">
+                            <li style="margin-bottom: 0.5rem;">Todo el Paquete Básico +</li>
+                            <li style="margin-bottom: 0.5rem;">Limpieza profunda de tapicería</li>
+                            <li style="margin-bottom: 0.5rem;">Pulido de 1 etapa</li>
+                            <li style="margin-bottom: 0.5rem;">Aplicación de cera sintética</li>
+                            <li style="margin-bottom: 0.5rem;">Limpieza de llantas profunda</li>
+                            <li style="margin-bottom: 0.5rem;">Aromatización profesional</li>
+                        </ul>
+                        <div class="paquete-selector" id="selector-premium" style="display: none; color: var(--primary); font-weight: 600;">
+                            <i class="fas fa-check-circle"></i> Seleccionado
+                        </div>
+                    </div>
+                    
+                    <!-- Paquete Completo -->
+                    <div class="paquete-card" style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; cursor: pointer;"
+                         onclick="seleccionarPaquete('completo', 4500)">
+                        <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <h4 style="color: var(--secondary); margin-bottom: 0.5rem; font-size: 1.3rem;">Paquete Completo</h4>
+                            <div style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$4.500</div>
+                            <div style="font-size: 0.9rem; color: #666;">Duración: 6-8 horas</div>
+                        </div>
+                        <ul style="text-align: left; padding-left: 1.2rem; margin-bottom: 1.5rem; font-size: 0.95rem;">
+                            <li style="margin-bottom: 0.5rem;">Todo el Paquete Premium +</li>
+                            <li style="margin-bottom: 0.5rem;">Corrección de pintura (2 etapas)</li>
+                            <li style="margin-bottom: 0.5rem;">Descontaminación con arcilla</li>
+                            <li style="margin-bottom: 0.5rem;">Sellado cerámico (1 año)</li>
+                            <li style="margin-bottom: 0.5rem;">Limpieza de motor básica</li>
+                            <li style="margin-bottom: 0.5rem;">Tratamiento de plásticos exteriores</li>
+                        </ul>
+                        <div class="paquete-selector" id="selector-completo" style="display: none; color: var(--primary); font-weight: 600;">
+                            <i class="fas fa-check-circle"></i> Seleccionado
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Servicios Adicionales -->
+                <div style="margin-top: 2rem;">
+                    <h4 style="color: var(--secondary); margin-bottom: 1rem; font-size: 1.1rem; text-align: center;">Servicios Adicionales (opcionales)</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: #f8f8f8; border-radius: 6px;">
+                            <span>Limpieza de motor profunda</span>
+                            <span style="font-weight: 600; color: var(--primary);">$800</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: #f8f8f8; border-radius: 6px;">
+                            <span>Tratamiento antilluvia vidrios</span>
+                            <span style="font-weight: 600; color: var(--primary);">$600</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: #f8f8f8; border-radius: 6px;">
+                            <span>Shampoo extra tapicería</span>
+                            <span style="font-weight: 600; color: var(--primary);">$400</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: #f8f8f8; border-radius: 6px;">
+                            <span>Renovación de plásticos negros</span>
+                            <span style="font-weight: 600; color: var(--primary);">$300</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Formulario de Contacto -->
+            <form id="reservaForm">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                    <!-- Información Personal -->
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">Información Personal</h3>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Nombre completo *</label>
+                            <input type="text" id="nombre" required 
+                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;">
+                        </div>
+                        
+                        <div style="margin-bottom: 1rem;">
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Teléfono *</label>
+                            <input type="tel" id="telefono" required 
+                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
+                                   placeholder="099 946 914">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
+                            <input type="email" id="email" 
+                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
+                                   placeholder="opcional para confirmación">
+                        </div>
+                    </div>
+                    
+                    <!-- Detalles del Vehículo -->
+                    <div>
+                        <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">Detalles del Vehículo</h3>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Marca *</label>
+                                <input type="text" id="marca" required 
+                                       style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
+                                       placeholder="Ej: Toyota">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Modelo *</label>
+                                <input type="text" id="modelo" required 
+                                       style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
+                                       placeholder="Ej: Corolla">
+                            </div>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Año *</label>
+                                <input type="number" id="anio" min="1990" max="2024" required 
+                                       style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
+                                       placeholder="Ej: 2020">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Color *</label>
+                                <input type="text" id="color" required 
+                                       style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
+                                       placeholder="Ej: Blanco">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Ubicación (Barrio/Zona) *</label>
+                            <select id="ubicacion" required 
+                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;">
+                                <option value="">Selecciona tu zona</option>
+                                <option value="centro">Centro</option>
+                                <option value="pocitos">Pocitos</option>
+                                <option value="punta-carreras">Punta Carretas</option>
+                                <option value="carrasco">Carrasco</option>
+                                <option value="parque-rodó">Parque Rodó</option>
+                                <option value="cordón">Cordón</option>
+                                <option value="palermo">Palermo</option>
+                                <option value="malvin">Malvín</option>
+                                <option value="punta-gorda">Punta Gorda</option>
+                                <option value="buceo">Buceo</option>
+                                <option value="ciudad-vieja">Ciudad Vieja</option>
+                                <option value="otro">Otra zona de Montevideo</option>
+                                <option value="ciudad-costa">Ciudad de la Costa</option>
+                                <option value="otro-departamento">Otro departamento</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fecha y Comentarios -->
+                <div style="margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">Fecha y Comentarios</h3>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Fecha preferida *</label>
+                            <input type="date" id="fecha" required 
+                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;">
+                        </div>
+                        
+                        <div>
+                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Horario preferido *</label>
+                            <select id="horario" required 
+                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;">
+                                <option value="">Selecciona horario</option>
+                                <option value="mañana">Mañana (8:00 - 12:00)</option>
+                                <option value="tarde">Tarde (13:00 - 17:00)</option>
+                                <option value="todo-dia">Todo el día (flexible)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Comentarios adicionales</label>
+                        <textarea id="comentarios" rows="3" 
+                                  style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
+                                  placeholder="Especificaciones especiales, necesidades particulares, etc."></textarea>
+                    </div>
+                </div>
+                
+                <!-- Resumen y Envío -->
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--secondary); margin-bottom: 1rem; font-size: 1.2rem;">Resumen de Reserva</h4>
+                    
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                        <div>
+                            <span style="font-weight: 600;" id="resumen-paquete">Paquete: No seleccionado</span>
+                        </div>
+                        <div>
+                            <span style="font-weight: 600; color: var(--primary);" id="resumen-precio">$0</span>
+                        </div>
+                    </div>
+                    
+                    <div style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">
+                        <i class="fas fa-info-circle" style="color: var(--primary); margin-right: 5px;"></i>
+                        El precio incluye desplazamiento dentro de Montevideo
+                    </div>
+                    
+                    <div style="font-size: 0.9rem; color: #666;">
+                        <i class="fas fa-info-circle" style="color: var(--primary); margin-right: 5px;"></i>
+                        Te contactaremos por WhatsApp para confirmar disponibilidad exacta
+                    </div>
+                </div>
+                
+                <!-- Botón de Envío -->
+                <div style="text-align: center;">
+                    <button type="button" onclick="enviarReserva()" 
+                            style="background-color: #25D366; color: white; padding: 15px 40px; border: none; border-radius: 5px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease;">
+                        <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i>
+                        Enviar Reserva por WhatsApp
+                    </button>
+                    
+                    <div style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+                        Al enviar, serás redirigido a WhatsApp para confirmar los detalles
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+// Variables globales
+let paqueteSeleccionado = null;
+let precioSeleccionado = 0;
+
+// Función para seleccionar paquete
+function seleccionarPaquete(tipo, precio) {
+    // Remover selección anterior
+    document.querySelectorAll('.paquete-card').forEach(card => {
+        card.style.borderColor = '#e0e0e0';
+        card.style.boxShadow = 'none';
+    });
+    
+    // Ocultar todos los selectores
+    document.querySelectorAll('.paquete-selector').forEach(selector => {
+        selector.style.display = 'none';
+    });
+    
+    // Aplicar selección nueva
+    const card = document.querySelector(`[onclick*="${tipo}"]`);
+    card.style.borderColor = 'var(--primary)';
+    card.style.boxShadow = '0 5px 15px rgba(211, 47, 47, 0.15)';
+    
+    // Mostrar selector
+    document.getElementById(`selector-${tipo}`).style.display = 'block';
+    
+    // Guardar selección
+    paqueteSeleccionado = tipo;
+    precioSeleccionado = precio;
+    
+    // Actualizar resumen
+    actualizarResumen();
+}
+
+// Función para actualizar el resumen
+function actualizarResumen() {
+    const nombresPaquetes = {
+        'basico': 'Paquete Básico',
+        'premium': 'Paquete Premium',
+        'completo': 'Paquete Completo'
+    };
+    
+    const resumenPaquete = document.getElementById('resumen-paquete');
+    const resumenPrecio = document.getElementById('resumen-precio');
+    
+    if (paqueteSeleccionado) {
+        resumenPaquete.textContent = `Paquete: ${nombresPaquetes[paqueteSeleccionado]}`;
+        resumenPrecio.textContent = `$${precioSeleccionado}`;
+    } else {
+        resumenPaquete.textContent = 'Paquete: No seleccionado';
+        resumenPrecio.textContent = '$0';
+    }
+}
+
+// Función para validar y enviar el formulario
+function enviarReserva() {
+    // Validar campos obligatorios
+    const nombre = document.getElementById('nombre').value;
+    const telefono = document.getElementById('telefono').value;
+    const marca = document.getElementById('marca').value;
+    const modelo = document.getElementById('modelo').value;
+    const anio = document.getElementById('anio').value;
+    const color = document.getElementById('color').value;
+    const ubicacion = document.getElementById('ubicacion').value;
+    const fecha = document.getElementById('fecha').value;
+    const horario = document.getElementById('horario').value;
+    
+    if (!nombre || !telefono || !marca || !modelo || !anio || !color || !ubicacion || !fecha || !horario) {
+        alert('Por favor completa todos los campos obligatorios (*)');
+        return;
+    }
+    
+    if (!paqueteSeleccionado) {
+        alert('Por favor selecciona un paquete de servicios');
+        return;
+    }
+    
+    // Formatear fecha
+    const fechaObj = new Date(fecha);
+    const fechaFormateada = fechaObj.toLocaleDateString('es-UY', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    
+    // Nombre del paquete
+    const nombresPaquetes = {
+        'basico': 'Paquete Básico ($1.600)',
+        'premium': 'Paquete Premium ($2.900)',
+        'completo': 'Paquete Completo ($4.500)'
+    };
+    
+    // Crear mensaje para WhatsApp
+    const mensaje = `Hola! Quiero reservar un servicio de detailing.
+
+📋 *INFORMACIÓN DEL CLIENTE:*
+• Nombre: ${nombre}
+• Teléfono: ${telefono}
+• Email: ${document.getElementById('email').value || 'No proporcionado'}
+
+🚗 *INFORMACIÓN DEL VEHÍCULO:*
+• Vehículo: ${marca} ${modelo} ${anio}
+• Color: ${color}
+• Ubicación: ${ubicacion}
+
+🎯 *SERVICIO SOLICITADO:*
+• Paquete: ${nombresPaquetes[paqueteSeleccionado]}
+• Precio: $${precioSeleccionado}
+
+📅 *FECHA Y HORA:*
+• Fecha preferida: ${fechaFormateada}
+• Horario: ${document.getElementById('horario').options[document.getElementById('horario').selectedIndex].text}
+
+💬 *COMENTARIOS ADICIONALES:*
+${document.getElementById('comentarios').value || 'Ninguno'}
+
+¿Podrías confirmarme la disponibilidad para esta reserva? ¡Gracias!`;
+
+    // Codificar mensaje para URL
+    const mensajeCodificado = encodeURIComponent(mensaje);
+    
+    // Número de WhatsApp (cambia este número por el tuyo)
+    const numeroWhatsApp = '59899946914'; // Tu número sin el + o 00
+    
+    // Redirigir a WhatsApp
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`, '_blank');
+}
+
+// Configurar fecha mínima (mañana)
+document.addEventListener('DOMContentLoaded', function() {
+    const fechaInput = document.getElementById('fecha');
+    const hoy = new Date();
+    const manana = new Date(hoy);
+    manana.setDate(hoy.getDate() + 1);
+    
+    // Formatear a YYYY-MM-DD
+    const fechaMinima = manana.toISOString().split('T')[0];
+    fechaInput.min = fechaMinima;
+    
+    // Establecer fecha por defecto (mañana)
+    fechaInput.value = fechaMinima;
+    
+    // Seleccionar automáticamente el paquete premium
+    setTimeout(() => {
+        seleccionarPaquete('premium', 2900);
+    }, 100);
+});
+</script>
+
+<style>
+/* Estilos adicionales para el formulario */
+.paquete-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.1);
+}
+
+@media (max-width: 768px) {
+    .reserva-container {
+        padding: 1.5rem !important;
+    }
+    
+    .paquetes-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .reserva-container > div:first-child {
+        grid-template-columns: 1fr !important;
+    }
+}
+</style>
 
     <!-- Why Choose Us Section -->
     <section id="por-que-elegirnos" class="why-us">

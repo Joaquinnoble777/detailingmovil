@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detailing Móvil Montevideo | Servicio Profesional a Domicilio</title>
-    <meta name="description" content="Servicio de detailing móvil en Montevideo. Tu auto impecable sin moverte de tu casa. Lavado profesional, limpieza interior, protección y más.">
+    <title>Detailing Pro Uruguay | Servicio Profesional a Domicilio</title>
+    <meta name="description" content="Servicio premium de detailing móvil en Montevideo. Equipamiento profesional Maxshine, Vonixx y herramientas de primera. Tu auto impecable en tu casa.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-    
         :root {
             --primary: #d32f2f;
             --primary-dark: #b71c1c;
-            --secondary: #212121;
-            --accent: #f5f5f5;
-            --light-gray: #e0e0e0;
-            --text: #333333;
+            --secondary: #1a237e;
+            --accent: #ffab00;
+            --dark: #212121;
+            --light: #f5f5f5;
+            --gray: #757575;
             --white: #ffffff;
+            --whatsapp: #25D366;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
         }
         
         * {
@@ -29,28 +32,29 @@
         
         body {
             font-family: 'Roboto', sans-serif;
-            color: var(--text);
+            color: var(--dark);
             line-height: 1.6;
             background-color: var(--white);
         }
         
-        h1, h2, h3, h4 {
+        h1, h2, h3, h4, h5 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            color: var(--secondary);
-            margin-bottom: 1rem;
+            color: var(--dark);
         }
         
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             line-height: 1.2;
+            margin-bottom: 1rem;
         }
         
         h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             position: relative;
+            padding-bottom: 15px;
         }
         
         h2:after {
@@ -59,10 +63,11 @@
             width: 80px;
             height: 4px;
             background: var(--primary);
-            margin: 0.5rem auto;
+            margin: 10px auto 0;
         }
         
-        p {
+        h3 {
+            font-size: 1.8rem;
             margin-bottom: 1rem;
         }
         
@@ -78,50 +83,64 @@
         }
         
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
             background-color: var(--primary);
             color: var(--white);
-            padding: 12px 30px;
+            padding: 14px 32px;
             border-radius: 4px;
             text-decoration: none;
-            font-weight: 600;
             font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
         }
         
         .btn:hover {
             background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
         
         .btn-large {
             font-size: 1.1rem;
-            padding: 15px 40px;
+            padding: 16px 40px;
         }
         
         .btn-whatsapp {
-            background-color: #25D366;
+            background-color: var(--whatsapp);
         }
         
         .btn-whatsapp:hover {
             background-color: #128C7E;
         }
         
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--dark);
+        }
+        
+        .btn-accent:hover {
+            background-color: #ff8f00;
+        }
+        
         /* Header */
         header {
-            background-color: var(--secondary);
+            background-color: rgba(26, 35, 126, 0.95);
             color: var(--white);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
         }
         
         .header-container {
@@ -131,165 +150,341 @@
         }
         
         .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
             text-decoration: none;
         }
         
-        .logo span {
-            color: var(--primary);
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+        
+        .logo-text span {
+            color: var(--accent);
+        }
+        
+        .logo-tagline {
+            font-size: 0.8rem;
+            color: #b0b0ff;
+            margin-top: -5px;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 2rem;
+            gap: 2rem;
         }
         
         nav ul li a {
             color: var(--white);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
         }
         
         nav ul li a:hover {
-            color: var(--primary);
+            color: var(--accent);
         }
         
-        .mobile-menu {
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
             display: none;
+            background: none;
+            border: none;
+            color: var(--white);
             font-size: 1.5rem;
             cursor: pointer;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1565689223820-b9fd5b8730d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1565689221354-d87f85d4aee2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
-            padding: 10rem 0 5rem;
+            padding: 12rem 0 6rem;
         }
         
         .hero h1 {
             color: var(--white);
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1.5rem;
         }
         
         .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            opacity: 0.9;
+        }
+        
+        .hero-highlight {
+            color: var(--accent);
+            font-weight: 600;
         }
         
         .hero-buttons {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
         
-        /* Services Section */
-        .services {
-            background-color: var(--accent);
+        /* Equipment Showcase */
+        .equipment {
+            background-color: var(--light);
         }
         
-        .services-grid {
+        .equipment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         
-        .service-card {
-            background-color: var(--white);
-            border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
+        .equipment-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
         
-        .service-card:hover {
+        .equipment-card:hover {
             transform: translateY(-10px);
         }
         
-        .service-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .service-card h3 {
-            margin-bottom: 1rem;
-        }
-        
-        /* Why Choose Us Section */
-        .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 1.5rem;
-        }
-        
-        .feature-icon {
-            background-color: var(--primary);
-            color: var(--white);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+        .equipment-img {
+            height: 200px;
+            background-color: #f0f0f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 1rem;
-            flex-shrink: 0;
+            font-size: 3.5rem;
+            color: var(--secondary);
         }
         
-        .feature-content h3 {
-            margin-bottom: 0.5rem;
+        .equipment-content {
+            padding: 1.8rem;
         }
         
-        /* Gallery Section */
-        .gallery {
-            background-color: var(--accent);
+        .equipment-content h3 {
+            color: var(--secondary);
+            margin-bottom: 0.8rem;
         }
         
-        .gallery-grid {
+        .brand-tag {
+            display: inline-block;
+            background: var(--secondary);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--white);
+        }
+        
+        .services-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            font-size: 1.1rem;
+        }
+        
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
         
-        .gallery-item {
-            height: 250px;
-            border-radius: 8px;
+        .service-card {
+            background: var(--white);
+            border-radius: 10px;
             overflow: hidden;
-            position: relative;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
         }
         
-        .gallery-item img {
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .service-header {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 1.8rem;
+            text-align: center;
+        }
+        
+        .service-header h3 {
+            color: var(--white);
+            margin: 0;
+        }
+        
+        .service-price {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 0.5rem 0;
+        }
+        
+        .service-duration {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .service-features {
+            padding: 1.8rem;
+        }
+        
+        .service-features ul {
+            list-style: none;
+        }
+        
+        .service-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .service-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-features li i {
+            color: var(--primary);
+        }
+        
+        .service-cta {
+            padding: 0 1.8rem 1.8rem;
+            text-align: center;
+        }
+        
+        /* Why Choose Us */
+        .why-us {
+            background-color: var(--light);
+        }
+        
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        /* Booking Section */
+        .booking {
+            background-color: var(--white);
+        }
+        
+        .booking-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--light);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--secondary);
+        }
+        
+        .form-control {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
         }
         
-        .gallery-item:hover img {
-            transform: scale(1.1);
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.15);
         }
         
-        /* Testimonials Section */
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .form-actions {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light);
+        }
+        
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -297,27 +492,17 @@
         }
         
         .testimonial-card {
-            background-color: var(--white);
-            border-radius: 8px;
+            background: var(--white);
+            border-radius: 10px;
             padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--shadow);
             position: relative;
-        }
-        
-        .testimonial-card:before {
-            content: "";
-            font-size: 5 rem;
-            color: var(--light-gray);   
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            font-family: Georgia, serif;
-            line-height: 1;
         }
         
         .testimonial-text {
             margin-bottom: 1.5rem;
             font-style: italic;
+            font-size: 1.05rem;
         }
         
         .testimonial-author {
@@ -329,13 +514,14 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: var(--light-gray);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
             margin-right: 1rem;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
-            color: var(--secondary);
+            color: white;
+            font-size: 1.2rem;
         }
         
         .author-info h4 {
@@ -343,85 +529,71 @@
         }
         
         .author-info p {
-            margin-bottom: 0;
-            color: #666;
+            color: var(--gray);
             font-size: 0.9rem;
-        }
-        
-        /* CTA Section */
-        .cta {
-            background: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)), url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
-            color: var(--white);
-            text-align: center;
-            padding: 5rem 0;
-        }
-        
-        .cta h2 {
-            color: var(--white);
-        }
-        
-        .cta h2:after {
-            background: var(--white);
-        }
-        
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 2rem;
-            font-size: 1.1rem;
-        }
-        
-        .whatsapp-contact {
-            margin-top: 2rem;
-            font-size: 1.2rem;
         }
         
         /* Footer */
         footer {
-            background-color: var(--secondary);
+            background-color: var(--dark);
             color: var(--white);
-            padding: 3rem 0 1.5rem;
+            padding: 4rem 0 2rem;
         }
         
-        .footer-content {
+        .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
         
         .footer-column h3 {
             color: var(--white);
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
+            margin-bottom: 1.8rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
         }
         
         .footer-column ul {
             list-style: none;
         }
         
-        .footer-column ul li {
+        .footer-column li {
             margin-bottom: 0.8rem;
         }
         
-        .footer-column ul li a {
-            color: var(--light-gray);
+        .footer-column a {
+            color: #ccc;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: var(--transition);
         }
         
-        .footer-column ul li a:hover {
-            color: var(--primary);
+        .footer-column a:hover {
+            color: var(--accent);
+            padding-left: 5px;
         }
         
-        .contact-info {
+        .contact-info li {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
+            gap: 12px;
             margin-bottom: 1rem;
         }
         
         .contact-info i {
-            margin-right: 0.8rem;
-            color: var(--primary);
+            color: var(--accent);
+            margin-top: 4px;
         }
         
         .social-links {
@@ -431,46 +603,81 @@
         }
         
         .social-links a {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             color: var(--white);
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
         
         .social-links a:hover {
-            background-color: var(--primary);
+            background: var(--primary);
             transform: translateY(-3px);
         }
         
-        .footer-bottom {
+        .copyright {
             text-align: center;
-            padding-top: 1.5rem;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-size: 0.9rem;
-            color: var(--light-gray);
+            color: #aaa;
         }
         
-        /* Responsive Styles */
-        @media (max-width: 768px) {
+        /* Responsive */
+        @media (max-width: 992px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             
             h2 {
-                font-size: 1.7rem;
+                font-size: 2.2rem;
             }
             
             .hero {
-                padding: 8rem 0 4rem;
+                padding: 10rem 0 5rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--secondary);
+                transition: var(--transition);
+                padding: 2rem;
+                z-index: 999;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1.5rem;
             }
             
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
             }
             
             .hero-buttons {
@@ -481,42 +688,28 @@
             .hero-buttons .btn {
                 width: 100%;
                 max-width: 300px;
-                margin-bottom: 1rem;
             }
             
-            nav ul {
-                display: none;
+            .booking-container {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
             }
             
-            .mobile-menu {
-                display: block;
+            h2 {
+                font-size: 1.8rem;
             }
             
-            .mobile-nav {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: var(--secondary);
-                padding: 1rem 0;
-                text-align: center;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-                z-index: 999;
+            section {
+                padding: 3rem 0;
             }
             
-            .mobile-nav ul {
-                list-style: none;
-            }
-            
-            .mobile-nav ul li {
-                margin: 1rem 0;
-            }
-            
-            .mobile-nav ul li a {
-                color: var(--white);
-                text-decoration: none;
-                font-weight: 500;
-                font-size: 1.1rem;
+            .service-price {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -525,668 +718,300 @@
     <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Detailing<span>Móvil</span></a>
-            <nav>
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div>
+                    <div class="logo-text">Detailing <span>Pro</span></div>
+                    <div class="logo-tagline">Montevideo | Servicio a Domicilio</div>
+                </div>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
                 <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#equipamiento">Equipamiento</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#por-que-elegirnos">¿Por Qué Elegirnos?</a></li>
-                    <li><a href="#galeria">Galería</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
-                    <li><a href="#contacto" class="btn">Reservar</a></li>
+                    <li><a href="#ventajas">Ventajas</a></li>
+                    <li><a href="#reserva" class="btn">Reservar</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <!-- Hero Section -->
-<section class="hero hero-blur">
-    <div class="container">
-        <h1>Tu auto impecable sin moverte de tu casa</h1>
-        <p>Servicio profesional de detailing móvil en Montevideo y alrededores. Cuidamos tu vehículo con productos de primera calidad y atención al detalle.</p>
-
-        <div class="hero-buttons">
-            <a href="https://wa.me/59899946914?text=Hola,%20me%20interesa%20el%20servicio%20de%20detailing" class="btn btn-large btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
-            </a>
-            <a href="#servicios" class="btn btn-large">Ver Servicios</a>
-        </div>
-    </div>
-</section>
-
-<style>
-.hero-blur {
-    position: relative;
-    overflow: hidden;
-    min-height: 60vh; /* Ajustable */
-    display: flex;
-    align-items: center;
-}
-
-/* Imagen desenfocada */
-.hero-blur::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://static.wixstatic.com/media/e7296194ce854ff7aeb315040516958e.jpg/v1/fill/w_640,h_352,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/e7296194ce854ff7aeb315040516958e.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: blur(8px);
-    transform: scale(1.1);
-    z-index: -2;
-}
-
-/* Overlay oscuro */
-.hero-blur::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.45); /* Ajusta la opacidad aquí */
-    z-index: -1;
-}
-
-.hero-blur .container {
-    position: relative;
-    z-index: 2;
-}
-</style>
-    <!-- Services Section -->
-    <section id="servicios" class="services">
+    <section class="hero" id="inicio">
         <div class="container">
-            <h2>¿Qué servicio ofrezco?</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3>Lavado exterior profesional</h3>
-                    <p>Limpieza exhaustiva de la carrocería con productos especializados que eliminan suciedad sin dañar la pintura.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-spray-can"></i>
-                    </div>
-                    <h3>Limpieza profunda interior</h3>
-                    <p>Eliminación de manchas, polvo y bacterias del interior de tu vehículo, dejándolo como nuevo.</p>
-                </div>
-               <div class="service-card">
-    <div class="service-icon">
-       <i class="fas fa-compact-disc"></i>
-    </div>
-    <h3>Limpieza y renovación de llantas</h3>
-    <p>Limpieza profunda de llantas y neumáticos, eliminando residuos de frenos y suciedad incrustada.</p>
-</div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-couch"></i>
-                    </div>
-                    <h3>Limpieza de tapizados y alfombras</h3>
-                    <p>Limpieza profunda con equipos especializados que eliminan manchas y olores de tapicerías y alfombras.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Aplicación de cera + protección</h3>
-                    <p>Protección duradera para la pintura con ceras de alta calidad que repelen agua y contaminantes.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <h3>Aromatización</h3>
-                    <p>Dejamos tu auto con un aroma fresco y agradable que perdura por semanas.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://wa.me/59899946914?text=Hola,%20me%20interesa%20el%20servicio%20de%20detailing" class="btn btn-large btn-whatsapp">
-                    <i class="fab fa-whatsapp"></i> Consultar Precios
+            <h1>Detailing Profesional con <span class="hero-highlight">Equipamiento de Primera</span></h1>
+            <p>Tu vehículo merece el mejor cuidado. Con nuestro equipamiento profesional <strong>Maxshine, Vonixx</strong> y herramientas de alta gama, garantizamos resultados excepcionales. Servicio 100% móvil en Montevideo.</p>
+            
+            <div class="hero-buttons">
+                <a href="#reserva" class="btn btn-large btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Reservar por WhatsApp
+                </a>
+                <a href="#servicios" class="btn btn-large btn-accent">
+                    <i class="fas fa-list"></i> Ver Planes y Precios
                 </a>
             </div>
         </div>
     </section>
 
-
-    <!-- Formulario de Reserva con Precios -->
-<section id="reserva" class="reserva-section" style="background-color: #f9f9f9; padding: 5rem 0;">
-    <div class="container">
-        <h2>Reserva tu Servicio</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.1rem;">
-            Completa el formulario y te contactaremos por WhatsApp para confirmar día y hora. 
-            <strong>Precios en pesos uruguayos (UYU)</strong> - Todos los servicios incluyen materiales y desplazamiento dentro de Montevideo.
-        </p>
-        
-        <div class="reserva-container" style="max-width: 1000px; margin: 0 auto; background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 8px 30px rgba(0,0,0,0.08);">
+    <!-- Equipment Showcase -->
+    <section class="equipment" id="equipamiento">
+        <div class="container">
+            <h2>Nuestro Equipamiento Profesional</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Invertimos en las mejores herramientas para garantizar resultados de calidad superior.</p>
             
-            <!-- Paquetes de Servicios -->
-            <div style="margin-bottom: 2.5rem;">
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.4rem; text-align: center;">Selecciona tu Paquete</h3>
-                
-                <div class="paquetes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-                    
-                    <!-- Paquete Básico -->
-                    <div class="paquete-card" style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; cursor: pointer;"
-                         onclick="seleccionarPaquete('basico', 1600)">
-                        <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                            <h4 style="color: var(--secondary); margin-bottom: 0.5rem; font-size: 1.3rem;">Paquete Básico</h4>
-                            <div style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$1.600</div>
-                            <div style="font-size: 0.9rem; color: #666;">Duración: 2-3 horas</div>
-                        </div>
-                        <ul style="text-align: left; padding-left: 1.2rem; margin-bottom: 1.5rem; font-size: 0.95rem;">
-                            <li style="margin-bottom: 0.5rem;">Lavado exterior completo</li>
-                            <li style="margin-bottom: 0.5rem;">Aspirado interior general</li>
-                            <li style="margin-bottom: 0.5rem;">Limpieza de vidrios</li>
-                            <li style="margin-bottom: 0.5rem;">Limpieza de plásticos interiores</li>
-                            <li style="margin-bottom: 0.5rem;">Secado con microfibra</li>
-                        </ul>
-                        <div class="paquete-selector" id="selector-basico" style="display: none; color: var(--primary); font-weight: 600;">
-                            <i class="fas fa-check-circle"></i> Seleccionado
-                        </div>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+                        <i class="fas fa-tools"></i>
                     </div>
-                    
-                    <!-- Paquete Premium -->
-                    <div class="paquete-card" style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; cursor: pointer; position: relative;"
-                         onclick="seleccionarPaquete('premium', 2900)">
-                        <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 15px; border-radius: 15px; font-size: 0.8rem; font-weight: 600;">
-                            MÁS POPULAR
-                        </div>
-                        <div style="background: linear-gradient(135deg, #f5f5f5, #e8f4fd); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                            <h4 style="color: var(--secondary); margin-bottom: 0.5rem; font-size: 1.3rem;">Paquete Premium</h4>
-                            <div style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$2.900</div>
-                            <div style="font-size: 0.9rem; color: #666;">Duración: 4-5 horas</div>
-                        </div>
-                        <ul style="text-align: left; padding-left: 1.2rem; margin-bottom: 1.5rem; font-size: 0.95rem;">
-                            <li style="margin-bottom: 0.5rem;">Todo el Paquete Básico +</li>
-                            <li style="margin-bottom: 0.5rem;">Limpieza profunda de tapicería</li>
-                            <li style="margin-bottom: 0.5rem;">Pulido de 1 etapa</li>
-                            <li style="margin-bottom: 0.5rem;">Aplicación de cera sintética</li>
-                            <li style="margin-bottom: 0.5rem;">Limpieza de llantas profunda</li>
-                            <li style="margin-bottom: 0.5rem;">Aromatización profesional</li>
-                        </ul>
-                        <div class="paquete-selector" id="selector-premium" style="display: none; color: var(--primary); font-weight: 600;">
-                            <i class="fas fa-check-circle"></i> Seleccionado
-                        </div>
-                    </div>
-                    
-                    <!-- Paquete Completo -->
-                    <div class="paquete-card" style="border: 2px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; cursor: pointer;"
-                         onclick="seleccionarPaquete('completo', 4500)">
-                        <div style="background: #f5f5f5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                            <h4 style="color: var(--secondary); margin-bottom: 0.5rem; font-size: 1.3rem;">Paquete Completo</h4>
-                            <div style="font-size: 1.8rem; font-weight: 700; color: var(--primary);">$4.500</div>
-                            <div style="font-size: 0.9rem; color: #666;">Duración: 6-8 horas</div>
-                        </div>
-                        <ul style="text-align: left; padding-left: 1.2rem; margin-bottom: 1.5rem; font-size: 0.95rem;">
-                            <li style="margin-bottom: 0.5rem;">Todo el Paquete Premium +</li>
-                            <li style="margin-bottom: 0.5rem;">Corrección de pintura (2 etapas)</li>
-                            <li style="margin-bottom: 0.5rem;">Descontaminación con arcilla</li>
-                            <li style="margin-bottom: 0.5rem;">Sellado cerámico (1 año)</li>
-                            <li style="margin-bottom: 0.5rem;">Limpieza de motor básica</li>
-                            <li style="margin-bottom: 0.5rem;">Tratamiento de plásticos exteriores</li>
-                        </ul>
-                        <div class="paquete-selector" id="selector-completo" style="display: none; color: var(--primary); font-weight: 600;">
-                            <i class="fas fa-check-circle"></i> Seleccionado
-                        </div>
+                    <div class="equipment-content">
+                        <span class="brand-tag">MAXSHINE</span>
+                        <h3>Pulidora Orbital M15 Pro</h3>
+                        <p>La herramienta definitiva para corrección de pintura profesional. Tecnología de rotación y oscilación para resultados de espejo sin riesgos.</p>
                     </div>
                 </div>
                 
-                <!-- Servicios Adicionales -->
-                <div style="margin-top: 2rem;">
-                    <h4 style="color: var(--secondary); margin-bottom: 1rem; font-size: 1.1rem; text-align: center;">Servicios Adicionales (opcionales)</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: #f8f8f8; border-radius: 6px;">
-                            <span>Limpieza de motor profunda</span>
-                            <span style="font-weight: 600; color: var(--primary);">$800</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: #f8f8f8; border-radius: 6px;">
-                            <span>Tratamiento antilluvia vidrios</span>
-                            <span style="font-weight: 600; color: var(--primary);">$600</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: #f8f8f8; border-radius: 6px;">
-                            <span>Shampoo extra tapicería</span>
-                            <span style="font-weight: 600; color: var(--primary);">$400</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: #f8f8f8; border-radius: 6px;">
-                            <span>Renovación de plásticos negros</span>
-                            <span style="font-weight: 600; color: var(--primary);">$300</span>
-                        </div>
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background: linear-gradient(135deg, #f3e5f5, #e1bee7);">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <div class="equipment-content">
+                        <span class="brand-tag">PRESCOTT + BTA</span>
+                        <h3>Sistema de Aire Completo</h3>
+                        <p>Compresor Prescott 50Lt y aspiradora BTA 20L para limpieza interior y exterior de máxima potencia. Herramientas neumáticas profesionales.</p>
+                    </div>
+                </div>
+                
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <div class="equipment-content">
+                        <span class="brand-tag">VONIXX + KOCH</span>
+                        <h3>Químicos Premium</h3>
+                        <p>Línea completa de productos profesionales: limpieza, descontaminación, corrección y protección duradera. Calidad garantizada.</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2>Planes de Servicios</h2>
+            <p class="services-intro">Selecciona el paquete que mejor se adapte a las necesidades de tu vehículo. Todos incluyen desplazamiento en Montevideo y uso de productos premium.</p>
             
-            <!-- Formulario de Contacto -->
-            <form id="reservaForm">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
-                    <!-- Información Personal -->
-                    <div>
-                        <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">Información Personal</h3>
-                        
-                        <div style="margin-bottom: 1rem;">
-                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Nombre completo *</label>
-                            <input type="text" id="nombre" required 
-                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;">
+            <div class="services-grid">
+                <!-- Plan Básico -->
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3>Detailing Básico</h3>
+                        <div class="service-price">$1.600</div>
+                        <div class="service-duration">2-3 horas</div>
+                    </div>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Lavado exterior con shampoo Vonixx PH Neutro</li>
+                            <li><i class="fas fa-check"></i> Limpieza de llantas con Izer Vonixx Ferrico</li>
+                            <li><i class="fas fa-check"></i> Aspirado completo interior</li>
+                            <li><i class="fas fa-check"></i> Limpieza de vidrios con Prizm</li>
+                            <li><i class="fas fa-check"></i> Secado con microfibra profesional</li>
+                            <li><i class="fas fa-check"></i> Aplicación de Cera Blend Spray</li>
+                        </ul>
+                    </div>
+                    <div class="service-cta">
+                        <a href="#reserva" class="btn">Reservar este Plan</a>
+                    </div>
+                </div>
+                
+                <!-- Plan Premium -->
+                <div class="service-card">
+                    <div class="service-header" style="background: linear-gradient(135deg, var(--secondary), #283593);">
+                        <h3>Detailing Premium</h3>
+                        <div class="service-price">$2.900</div>
+                        <div class="service-duration">4-5 horas</div>
+                    </div>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Todo el Detailing Básico</li>
+                            <li><i class="fas fa-check"></i> Descontaminación con removedor de lluvia ácida</li>
+                            <li><i class="fas fa-check"></i> Pulido ligero con máquina orbital</li>
+                            <li><i class="fas fa-check"></i> Renovación de plásticos con Flexus</li>
+                            <li><i class="fas fa-check"></i> Limpieza interior profunda con APC</li>
+                            <li><i class="fas fa-check"></i> Abrillantado con Shiny Restaurax</li>
+                            <li><i class="fas fa-check"></i> Aromatización profesional</li>
+                        </ul>
+                    </div>
+                    <div class="service-cta">
+                        <a href="#reserva" class="btn btn-accent">MÁS POPULAR</a>
+                    </div>
+                </div>
+                
+                <!-- Plan Corrección -->
+                <div class="service-card">
+                    <div class="service-header" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark));">
+                        <h3>Corrección Completa</h3>
+                        <div class="service-price">$4.500</div>
+                        <div class="service-duration">6-8 horas</div>
+                    </div>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Todo el Detailing Premium</li>
+                            <li><i class="fas fa-check"></i> Corrección de pintura (2 etapas)</li>
+                            <li><i class="fas fa-check"></i> Descontaminación con arcilla profesional</li>
+                            <li><i class="fas fa-check"></i> Sellado cerámico (1 año de duración)</li>
+                            <li><i class="fas fa-check"></i> Tratamiento de plásticos exteriores</li>
+                            <li><i class="fas fa-check"></i> Protección de 12 meses garantizada</li>
+                            <li><i class="fas fa-check"></i> Limpieza de motor básica</li>
+                        </ul>
+                    </div>
+                    <div class="service-cta">
+                        <a href="#reserva" class="btn">Consultar Disponibilidad</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="ventajas" class="why-us">
+        <div class="container">
+            <h2>¿Por Qué Elegir Detailing Pro?</h2>
+            <div class="why-us-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck-moving"></i>
+                    </div>
+                    <h3>Servicio 100% Móvil</h3>
+                    <p>Vamos a tu domicilio u oficina en Montevideo y alrededores. Tu eliges el lugar y horario.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Equipamiento Profesional</h3>
+                    <p>Pulidoras Maxshine, compresor Prescott, productos Vonixx y Koch Chemie. Herramientas de primera línea.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Resultados Garantizados</h3>
+                    <p>Cada servicio es supervisado para garantizar la máxima calidad y satisfacción del cliente.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Puntualidad y Eficiencia</h3>
+                    <p>Respetamos tu tiempo. Trabajamos con eficiencia para entregar resultados en el plazo acordado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="reserva" class="booking">
+        <div class="container">
+            <h2>Reserva tu Servicio</h2>
+            <div class="booking-container">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nombre completo *</label>
+                            <input type="text" id="name" class="form-control" required>
                         </div>
-                        
-                        <div style="margin-bottom: 1rem;">
-                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Teléfono *</label>
-                            <input type="tel" id="telefono" required 
-                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
-                                   placeholder="099 946 914">
-                        </div>
-                        
-                        <div>
-                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
-                            <input type="email" id="email" 
-                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
-                                   placeholder="opcional para confirmación">
+                        <div class="form-group">
+                            <label for="phone">Teléfono *</label>
+                            <input type="tel" id="phone" class="form-control" required placeholder="099 946 914">
                         </div>
                     </div>
                     
-                    <!-- Detalles del Vehículo -->
-                    <div>
-                        <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">Detalles del Vehículo</h3>
-                        
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
-                            <div>
-                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Marca *</label>
-                                <input type="text" id="marca" required 
-                                       style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
-                                       placeholder="Ej: Toyota">
-                            </div>
-                            <div>
-                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Modelo *</label>
-                                <input type="text" id="modelo" required 
-                                       style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
-                                       placeholder="Ej: Corolla">
-                            </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="vehicle">Vehículo (Marca/Modelo) *</label>
+                            <input type="text" id="vehicle" class="form-control" required placeholder="Ej: Toyota Corolla">
                         </div>
-                        
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
-                            <div>
-                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Año *</label>
-                                <input type="number" id="anio" min="1990" max="2024" required 
-                                       style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
-                                       placeholder="Ej: 2020">
-                            </div>
-                            <div>
-                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Color *</label>
-                                <input type="text" id="color" required 
-                                       style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
-                                       placeholder="Ej: Blanco">
-                            </div>
+                        <div class="form-group">
+                            <label for="year">Año del vehículo *</label>
+                            <input type="number" id="year" class="form-control" required min="1990" max="2024">
                         </div>
-                        
-                        <div>
-                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Ubicación (Barrio/Zona) *</label>
-                            <select id="ubicacion" required 
-                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="service">Servicio solicitado *</label>
+                            <select id="service" class="form-control" required>
+                                <option value="">Seleccione un servicio</option>
+                                <option value="basico">Detailing Básico - $1.600</option>
+                                <option value="premium">Detailing Premium - $2.900</option>
+                                <option value="correccion">Corrección Completa - $4.500</option>
+                                <option value="personalizado">Servicio Personalizado</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Ubicación (Barrio/Zona) *</label>
+                            <select id="location" class="form-control" required>
                                 <option value="">Selecciona tu zona</option>
                                 <option value="centro">Centro</option>
                                 <option value="pocitos">Pocitos</option>
                                 <option value="punta-carreras">Punta Carretas</option>
                                 <option value="carrasco">Carrasco</option>
-                                <option value="parque-rodó">Parque Rodó</option>
-                                <option value="cordón">Cordón</option>
-                                <option value="palermo">Palermo</option>
-                                <option value="malvin">Malvín</option>
-                                <option value="punta-gorda">Punta Gorda</option>
-                                <option value="buceo">Buceo</option>
-                                <option value="ciudad-vieja">Ciudad Vieja</option>
                                 <option value="otro">Otra zona de Montevideo</option>
-                                <option value="ciudad-costa">Ciudad de la Costa</option>
-                                <option value="otro-departamento">Otro departamento</option>
                             </select>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Fecha y Comentarios -->
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: var(--primary); margin-bottom: 1.5rem; font-size: 1.3rem;">Fecha y Comentarios</h3>
                     
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
-                        <div>
-                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Fecha preferida *</label>
-                            <input type="date" id="fecha" required 
-                                   style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Fecha preferida *</label>
+                            <input type="date" id="date" class="form-control" required>
                         </div>
-                        
-                        <div>
-                            <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Horario preferido *</label>
-                            <select id="horario" required 
-                                    style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;">
+                        <div class="form-group">
+                            <label for="time">Horario preferido *</label>
+                            <select id="time" class="form-control" required>
                                 <option value="">Selecciona horario</option>
                                 <option value="mañana">Mañana (8:00 - 12:00)</option>
                                 <option value="tarde">Tarde (13:00 - 17:00)</option>
-                                <option value="todo-dia">Todo el día (flexible)</option>
+                                <option value="flexible">Horario flexible</option>
                             </select>
                         </div>
                     </div>
                     
-                    <div>
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Comentarios adicionales</label>
-                        <textarea id="comentarios" rows="3" 
-                                  style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Roboto', sans-serif;"
-                                  placeholder="Especificaciones especiales, necesidades particulares, etc."></textarea>
-                    </div>
-                </div>
-                
-                <!-- Resumen y Envío -->
-                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem;">
-                    <h4 style="color: var(--secondary); margin-bottom: 1rem; font-size: 1.2rem;">Resumen de Reserva</h4>
-                    
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                        <div>
-                            <span style="font-weight: 600;" id="resumen-paquete">Paquete: No seleccionado</span>
-                        </div>
-                        <div>
-                            <span style="font-weight: 600; color: var(--primary);" id="resumen-precio">$0</span>
-                        </div>
+                    <div class="form-group">
+                        <label for="message">Comentarios adicionales</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="¿Alguna zona específica que necesite atención especial?"></textarea>
                     </div>
                     
-                    <div style="font-size: 0.9rem; color: #666; margin-bottom: 0.5rem;">
-                        <i class="fas fa-info-circle" style="color: var(--primary); margin-right: 5px;"></i>
-                        El precio incluye desplazamiento dentro de Montevideo
+                    <div class="form-actions">
+                        <button type="button" id="submitBtn" class="btn btn-large btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Enviar Reserva por WhatsApp
+                        </button>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">
+                            Te contactaremos por WhatsApp para confirmar disponibilidad exacta
+                        </p>
                     </div>
-                    
-                    <div style="font-size: 0.9rem; color: #666;">
-                        <i class="fas fa-info-circle" style="color: var(--primary); margin-right: 5px;"></i>
-                        Te contactaremos por WhatsApp para confirmar disponibilidad exacta
-                    </div>
-                </div>
-                
-                <!-- Botón de Envío -->
-                <div style="text-align: center;">
-                    <button type="button" onclick="enviarReserva()" 
-                            style="background-color: #25D366; color: white; padding: 15px 40px; border: none; border-radius: 5px; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.1rem; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: all 0.3s ease;">
-                        <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i>
-                        Enviar Reserva por WhatsApp
-                    </button>
-                    
-                    <div style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                        Al enviar, serás redirigido a WhatsApp para confirmar los detalles
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-
-<script>
-// Variables globales
-let paqueteSeleccionado = null;
-let precioSeleccionado = 0;
-
-// Función para seleccionar paquete
-function seleccionarPaquete(tipo, precio) {
-    // Remover selección anterior
-    document.querySelectorAll('.paquete-card').forEach(card => {
-        card.style.borderColor = '#e0e0e0';
-        card.style.boxShadow = 'none';
-    });
-    
-    // Ocultar todos los selectores
-    document.querySelectorAll('.paquete-selector').forEach(selector => {
-        selector.style.display = 'none';
-    });
-    
-    // Aplicar selección nueva
-    const card = document.querySelector(`[onclick*="${tipo}"]`);
-    card.style.borderColor = 'var(--primary)';
-    card.style.boxShadow = '0 5px 15px rgba(211, 47, 47, 0.15)';
-    
-    // Mostrar selector
-    document.getElementById(`selector-${tipo}`).style.display = 'block';
-    
-    // Guardar selección
-    paqueteSeleccionado = tipo;
-    precioSeleccionado = precio;
-    
-    // Actualizar resumen
-    actualizarResumen();
-}
-
-// Función para actualizar el resumen
-function actualizarResumen() {
-    const nombresPaquetes = {
-        'basico': 'Paquete Básico',
-        'premium': 'Paquete Premium',
-        'completo': 'Paquete Completo'
-    };
-    
-    const resumenPaquete = document.getElementById('resumen-paquete');
-    const resumenPrecio = document.getElementById('resumen-precio');
-    
-    if (paqueteSeleccionado) {
-        resumenPaquete.textContent = `Paquete: ${nombresPaquetes[paqueteSeleccionado]}`;
-        resumenPrecio.textContent = `$${precioSeleccionado}`;
-    } else {
-        resumenPaquete.textContent = 'Paquete: No seleccionado';
-        resumenPrecio.textContent = '$0';
-    }
-}
-
-// Función para validar y enviar el formulario
-function enviarReserva() {
-    // Validar campos obligatorios
-    const nombre = document.getElementById('nombre').value;
-    const telefono = document.getElementById('telefono').value;
-    const marca = document.getElementById('marca').value;
-    const modelo = document.getElementById('modelo').value;
-    const anio = document.getElementById('anio').value;
-    const color = document.getElementById('color').value;
-    const ubicacion = document.getElementById('ubicacion').value;
-    const fecha = document.getElementById('fecha').value;
-    const horario = document.getElementById('horario').value;
-    
-    if (!nombre || !telefono || !marca || !modelo || !anio || !color || !ubicacion || !fecha || !horario) {
-        alert('Por favor completa todos los campos obligatorios (*)');
-        return;
-    }
-    
-    if (!paqueteSeleccionado) {
-        alert('Por favor selecciona un paquete de servicios');
-        return;
-    }
-    
-    // Formatear fecha
-    const fechaObj = new Date(fecha);
-    const fechaFormateada = fechaObj.toLocaleDateString('es-UY', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-    });
-    
-    // Nombre del paquete
-    const nombresPaquetes = {
-        'basico': 'Paquete Básico ($1.600)',
-        'premium': 'Paquete Premium ($2.900)',
-        'completo': 'Paquete Completo ($4.500)'
-    };
-    
-    // Crear mensaje para WhatsApp
-    const mensaje = `Hola! Quiero reservar un servicio de detailing.
-
-📋 *INFORMACIÓN DEL CLIENTE:*
-• Nombre: ${nombre}
-• Teléfono: ${telefono}
-• Email: ${document.getElementById('email').value || 'No proporcionado'}
-
-🚗 *INFORMACIÓN DEL VEHÍCULO:*
-• Vehículo: ${marca} ${modelo} ${anio}
-• Color: ${color}
-• Ubicación: ${ubicacion}
-
-🎯 *SERVICIO SOLICITADO:*
-• Paquete: ${nombresPaquetes[paqueteSeleccionado]}
-• Precio: $${precioSeleccionado}
-
-📅 *FECHA Y HORA:*
-• Fecha preferida: ${fechaFormateada}
-• Horario: ${document.getElementById('horario').options[document.getElementById('horario').selectedIndex].text}
-
-💬 *COMENTARIOS ADICIONALES:*
-${document.getElementById('comentarios').value || 'Ninguno'}
-
-¿Podrías confirmarme la disponibilidad para esta reserva? ¡Gracias!`;
-
-    // Codificar mensaje para URL
-    const mensajeCodificado = encodeURIComponent(mensaje);
-    
-    // Número de WhatsApp (cambia este número por el tuyo)
-    const numeroWhatsApp = '59899946914'; // Tu número sin el + o 00
-    
-    // Redirigir a WhatsApp
-    window.open(`https://wa.me/${numeroWhatsApp}?text=${mensajeCodificado}`, '_blank');
-}
-
-// Configurar fecha mínima (mañana)
-document.addEventListener('DOMContentLoaded', function() {
-    const fechaInput = document.getElementById('fecha');
-    const hoy = new Date();
-    const manana = new Date(hoy);
-    manana.setDate(hoy.getDate() + 1);
-    
-    // Formatear a YYYY-MM-DD
-    const fechaMinima = manana.toISOString().split('T')[0];
-    fechaInput.min = fechaMinima;
-    
-    // Establecer fecha por defecto (mañana)
-    fechaInput.value = fechaMinima;
-    
-    // Seleccionar automáticamente el paquete premium
-    setTimeout(() => {
-        seleccionarPaquete('premium', 2900);
-    }, 100);
-});
-</script>
-
-<style>
-/* Estilos adicionales para el formulario */
-.paquete-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-}
-
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    border-color: var(--primary) !important;
-    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.1);
-}
-
-@media (max-width: 768px) {
-    .reserva-container {
-        padding: 1.5rem !important;
-    }
-    
-    .paquetes-grid {
-        grid-template-columns: 1fr !important;
-    }
-    
-    .reserva-container > div:first-child {
-        grid-template-columns: 1fr !important;
-    }
-}
-</style>
-
-    <!-- Why Choose Us Section -->
-    <section id="por-que-elegirnos" class="why-us">
-        <div class="container">
-            <h2>¿Por qué elegirme?</h2>
-            <div class="why-us-grid">
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-truck-moving"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Servicio 100% móvil</h3>
-                        <p>Vamos hasta tu casa o trabajo en Montevideo y alrededores. Tú eliges el lugar y la hora.</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Productos de calidad profesional</h3>
-                        <p>Utilizamos solo productos de primera línea que garantizan resultados óptimos sin dañar tu vehículo.</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Herramientas profesionales</h3>
-                        <p>Contamos con equipamiento de última generación para un detailing completo y eficiente.</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Rapidez y puntualidad</h3>
-                        <p>Respetamos tu tiempo. Llegamos puntual y trabajamos eficientemente para entregar resultados en el plazo acordado.</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Resultados visibles</h3>
-                        <p>Tu auto lucirá como nuevo desde la primera sesión. La diferencia es notable inmediatamente.</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <div class="feature-content">
-                        <h3>Atención al detalle</h3>
-                        <p>Nos enfocamos en cada pequeño detalle para garantizar un resultado impecable en todo el vehículo.</p>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="galeria" class="gallery">
+    <!-- Testimonials -->
+    <section class="testimonials">
         <div class="container">
-            <h2>Nuestros Trabajos</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1021&q=80" alt="Auto brillante después del detailing">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Interior de auto limpio">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1603712610496-5369a7540c30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Llantas limpias y renovadas">
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Detalle de pintura brillante">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonios" class="testimonials">
-        <div class="container">
-            <h2>Lo que dicen nuestros clientes</h2>
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
@@ -1200,6 +1025,7 @@ input:focus, select:focus, textarea:focus {
                         </div>
                     </div>
                 </div>
+                
                 <div class="testimonial-card">
                     <div class="testimonial-text">
                         "Increíble el trabajo en las llantas, no las había visto tan limpias desde que compré el auto. Muy contento con el resultado."
@@ -1212,6 +1038,7 @@ input:focus, select:focus, textarea:focus {
                         </div>
                     </div>
                 </div>
+                
                 <div class="testimonial-card">
                     <div class="testimonial-text">
                         "La comodidad de que vengan a mi casa no tiene precio. El interior de mi auto quedó impecable, hasta los detalles más pequeños."
@@ -1228,100 +1055,153 @@ input:focus, select:focus, textarea:focus {
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section id="contacto" class="cta">
-        <div class="container">
-            <h2>¿Listo para tener tu auto impecable?</h2>
-            <p>Reserva ahora y recibe un servicio profesional de detailing en la comodidad de tu hogar u oficina.</p>
-            <a href="https://wa.me/59899946914?text=Hola,%20me%20interesa%20el%20servicio%20de%20detailing" class="btn btn-large btn-whatsapp">
-                <i class="fab fa-whatsapp"></i> Reservar tu servicio ahora
-            </a>
-           
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-column">
-                    <h3>Detailing Móvil</h3>
-                    <p>Servicio profesional de detailing a domicilio en Montevideo y alrededores. Cuidamos tu auto como si fuera nuestro.</p>
+                    <h3>Detailing Pro</h3>
+                    <p>Servicio premium de detailing móvil con equipamiento profesional de primera línea. Tu auto impecable en la comodidad de tu hogar.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/59899946914"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="footer-column">
-                    <h3>Servicios</h3>
-                    <ul>
-                        <li><a href="#servicios">Lavado exterior profesional</a></li>
-                        <li><a href="#servicios">Limpieza profunda interior</a></li>
-                        <li><a href="#servicios">Limpieza de llantas</a></li>
-                        <li><a href="#servicios">Limpieza de tapizados</a></li>
-                        <li><a href="#servicios">Aplicación de cera</a></li>
-                        <li><a href="#servicios">Aromatización</a></li>
-                    </ul>
-                </div>
+                
                 <div class="footer-column">
                     <h3>Contacto</h3>
-                    <div class="contact-info">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Montevideo y alrededores</span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>099 946 914</span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>WhatsApp: 099 946 914</span>
-                    </div>
-                    <div class="contact-info">
-                        <i class="far fa-clock"></i>
-                        <span>Lun a Dom: 8:00 - 20:00</span>
-                    </div>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>Teléfono/WhatsApp: 099 946 914</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Servicio a domicilio en Montevideo</span>
+                        </li>
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <span>Lun a Dom: 8:00 - 20:00</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#equipamiento">Equipamiento</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#ventajas">Ventajas</a></li>
+                        <li><a href="#reserva">Reserva</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Detailing Móvil Montevideo. Todos los derechos reservados.</p>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Detailing Pro Uruguay. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            const mobileNav = document.querySelector('.mobile-nav');
-            if (mobileNav) {
-                mobileNav.remove();
-            } else {
-                const nav = document.createElement('div');
-                nav.className = 'mobile-nav';
-                nav.innerHTML = `
-                    <ul>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#por-que-elegirnos">¿Por Qué Elegirnos?</a></li>
-                        <li><a href="#galeria">Galería</a></li>
-                        <li><a href="#testimonios">Testimonios</a></li>
-                        <li><a href="#contacto" class="btn">Reservar</a></li>
-                    </ul>
-                `;
-                document.body.appendChild(nav);
-                
-                // Close menu when clicking a link
-                nav.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        nav.remove();
-                    });
-                });
-            }
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
         });
-
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Booking Form WhatsApp Integration
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const vehicle = document.getElementById('vehicle').value;
+            const year = document.getElementById('year').value;
+            const service = document.getElementById('service').value;
+            const location = document.getElementById('location').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const message = document.getElementById('message').value;
+            
+            if (!name || !phone || !vehicle || !year || !service || !location || !date || !time) {
+                alert('Por favor complete todos los campos obligatorios (*)');
+                return;
+            }
+            
+            // Map service value to display name
+            const serviceMap = {
+                'basico': 'Detailing Básico - $1.600',
+                'premium': 'Detailing Premium - $2.900',
+                'correccion': 'Corrección Completa - $4.500',
+                'personalizado': 'Servicio Personalizado'
+            };
+            
+            const serviceName = serviceMap[service] || service;
+            
+            // Format date
+            const dateObj = new Date(date);
+            const formattedDate = dateObj.toLocaleDateString('es-UY', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Create WhatsApp message
+            const whatsappMessage = `*NUEVA RESERVA - DETAILING PRO URUGUAY*%0A%0A` +
+                                   `*👤 Información del Cliente:*%0A` +
+                                   `• Nombre: ${name}%0A` +
+                                   `• Teléfono: ${phone}%0A%0A` +
+                                   `*🚗 Información del Vehículo:*%0A` +
+                                   `• Vehículo: ${vehicle}%0A` +
+                                   `• Año: ${year}%0A` +
+                                   `• Zona: ${location}%0A%0A` +
+                                   `*🎯 Servicio Solicitado:*%0A` +
+                                   `• ${serviceName}%0A%0A` +
+                                   `*📅 Fecha y Horario:*%0A` +
+                                   `• Fecha: ${formattedDate}%0A` +
+                                   `• Horario: ${time}%0A%0A` +
+                                   `*💬 Comentarios:*%0A` +
+                                   `${message || 'Sin comentarios adicionales'}%0A%0A` +
+                                   `¿Podrías confirmar disponibilidad para esta reserva? ¡Gracias!`;
+            
+            // Open WhatsApp
+            const whatsappUrl = `https://wa.me/59899946914?text=${whatsappMessage}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Reset form
+            document.getElementById('bookingForm').reset();
+            
+            // Reset date to tomorrow
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            document.getElementById('date').value = tomorrow.toISOString().split('T')[0];
+        });
+        
+        // Set minimum date to tomorrow
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
+        document.getElementById('date').min = tomorrow.toISOString().split('T')[0];
+        document.getElementById('date').value = tomorrow.toISOString().split('T')[0];
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
                 const targetId = this.getAttribute('href');
@@ -1335,6 +1215,18 @@ input:focus, select:focus, textarea:focus {
                     });
                 }
             });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(26, 35, 126, 0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.2)';
+            } else {
+                header.style.backgroundColor = 'rgba(26, 35, 126, 0.95)';
+                header.style.boxShadow = '0 2px 15px rgba(0,0,0,0.2)';
+            }
         });
     </script>
 </body>
